@@ -122,14 +122,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp" />
-    <ClCompile Include="UCPlay.cpp" />
+    <ClCompile Include="UCgplay.cpp" />
     <ClCompile Include="MyUserControl1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="UCPlay.h">
+    <ClInclude Include="UCgplay.h">
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="MyUserControl1.h">
@@ -140,8 +140,8 @@
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCPlay.resx">
-      <DependentUpon>UCPlay.h</DependentUpon>
+    <EmbeddedResource Include="UCgplay.resx">
+      <DependentUpon>UCgplay.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyUserControl1.resx">
       <DependentUpon>MyUserControl1.h</DependentUpon>

@@ -51,6 +51,7 @@ namespace MEMA1 {
 
 
 	private: System::Windows::Forms::Panel^ mainbg;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 
 
@@ -75,7 +76,9 @@ namespace MEMA1 {
 			this->settingbtn = (gcnew System::Windows::Forms::Button());
 			this->infobtn = (gcnew System::Windows::Forms::Button());
 			this->mainbg = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->mainbg->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// exitbtn
@@ -159,12 +162,27 @@ namespace MEMA1 {
 			this->mainbg->Controls->Add(this->playbtn);
 			this->mainbg->Controls->Add(this->infobtn);
 			this->mainbg->Controls->Add(this->settingbtn);
+			this->mainbg->Controls->Add(this->pictureBox1);
 			this->mainbg->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->mainbg->Location = System::Drawing::Point(0, 0);
 			this->mainbg->Margin = System::Windows::Forms::Padding(2);
 			this->mainbg->Name = L"mainbg";
 			this->mainbg->Size = System::Drawing::Size(863, 455);
 			this->mainbg->TabIndex = 1;
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
+			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox1->Location = System::Drawing::Point(128, 59);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(633, 372);
+			this->pictureBox1->TabIndex = 1;
+			this->pictureBox1->TabStop = false;
 			// 
 			// MyForm
 			// 
@@ -182,6 +200,7 @@ namespace MEMA1 {
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"CyberSmart Challenge";
 			this->mainbg->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -194,7 +213,6 @@ namespace MEMA1 {
 	private: System::Void playbtn_Click(System::Object^ sender, System::EventArgs^ e) {
 		main = gcnew MyUserControl1();
 		main->Dock = System::Windows::Forms::DockStyle::Fill;
-		//mainbg->Controls->Clear();
 		this->Controls->Add(main);
 		main->BringToFront();
 	}

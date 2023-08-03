@@ -1,5 +1,5 @@
 #pragma once
-
+#include "UCgplay.h"
 namespace MEMA1 {
 
 	using namespace System;
@@ -15,7 +15,7 @@ namespace MEMA1 {
 	public ref class MyUserControl1 : public System::Windows::Forms::UserControl
 	{
 	private:
-		//MyForm^ myform = gcnew MyForm();
+		UCgplay^ main = gcnew UCgplay();
 
 	public:
 		MyUserControl1(void)
@@ -66,9 +66,9 @@ namespace MEMA1 {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyUserControl1::typeid));
 			this->mainbg = (gcnew System::Windows::Forms::Panel());
-			this->backbtn = (gcnew System::Windows::Forms::Button());
-			this->easybtn = (gcnew System::Windows::Forms::Button());
 			this->hardbtn = (gcnew System::Windows::Forms::Button());
+			this->easybtn = (gcnew System::Windows::Forms::Button());
+			this->backbtn = (gcnew System::Windows::Forms::Button());
 			this->mainbg->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -84,42 +84,6 @@ namespace MEMA1 {
 			this->mainbg->Name = L"mainbg";
 			this->mainbg->Size = System::Drawing::Size(863, 455);
 			this->mainbg->TabIndex = 0;
-			// 
-			// backbtn
-			// 
-			this->backbtn->BackColor = System::Drawing::Color::Transparent;
-			this->backbtn->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"backbtn.BackgroundImage")));
-			this->backbtn->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->backbtn->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->backbtn->FlatAppearance->BorderSize = 0;
-			this->backbtn->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
-			this->backbtn->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
-			this->backbtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->backbtn->Location = System::Drawing::Point(15, 16);
-			this->backbtn->Margin = System::Windows::Forms::Padding(2);
-			this->backbtn->Name = L"backbtn";
-			this->backbtn->Size = System::Drawing::Size(60, 60);
-			this->backbtn->TabIndex = 1;
-			this->backbtn->UseVisualStyleBackColor = false;
-			this->backbtn->Click += gcnew System::EventHandler(this, &MyUserControl1::backbtn_Click);
-			// 
-			// easybtn
-			// 
-			this->easybtn->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
-			this->easybtn->BackColor = System::Drawing::Color::Transparent;
-			this->easybtn->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"easybtn.BackgroundImage")));
-			this->easybtn->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->easybtn->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->easybtn->FlatAppearance->BorderSize = 0;
-			this->easybtn->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
-			this->easybtn->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
-			this->easybtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->easybtn->Location = System::Drawing::Point(195, 255);
-			this->easybtn->Margin = System::Windows::Forms::Padding(2);
-			this->easybtn->Name = L"easybtn";
-			this->easybtn->Size = System::Drawing::Size(200, 200);
-			this->easybtn->TabIndex = 1;
-			this->easybtn->UseVisualStyleBackColor = false;
 			// 
 			// hardbtn
 			// 
@@ -139,6 +103,43 @@ namespace MEMA1 {
 			this->hardbtn->TabIndex = 1;
 			this->hardbtn->UseVisualStyleBackColor = false;
 			// 
+			// easybtn
+			// 
+			this->easybtn->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
+			this->easybtn->BackColor = System::Drawing::Color::Transparent;
+			this->easybtn->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"easybtn.BackgroundImage")));
+			this->easybtn->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->easybtn->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->easybtn->FlatAppearance->BorderSize = 0;
+			this->easybtn->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
+			this->easybtn->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
+			this->easybtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->easybtn->Location = System::Drawing::Point(195, 255);
+			this->easybtn->Margin = System::Windows::Forms::Padding(2);
+			this->easybtn->Name = L"easybtn";
+			this->easybtn->Size = System::Drawing::Size(200, 200);
+			this->easybtn->TabIndex = 1;
+			this->easybtn->UseVisualStyleBackColor = false;
+			this->easybtn->Click += gcnew System::EventHandler(this, &MyUserControl1::easybtn_Click);
+			// 
+			// backbtn
+			// 
+			this->backbtn->BackColor = System::Drawing::Color::Transparent;
+			this->backbtn->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"backbtn.BackgroundImage")));
+			this->backbtn->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->backbtn->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->backbtn->FlatAppearance->BorderSize = 0;
+			this->backbtn->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
+			this->backbtn->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
+			this->backbtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->backbtn->Location = System::Drawing::Point(15, 16);
+			this->backbtn->Margin = System::Windows::Forms::Padding(2);
+			this->backbtn->Name = L"backbtn";
+			this->backbtn->Size = System::Drawing::Size(60, 60);
+			this->backbtn->TabIndex = 1;
+			this->backbtn->UseVisualStyleBackColor = false;
+			this->backbtn->Click += gcnew System::EventHandler(this, &MyUserControl1::backbtn_Click);
+			// 
 			// MyUserControl1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -152,10 +153,14 @@ namespace MEMA1 {
 		}
 #pragma endregion
 	private: System::Void backbtn_Click(System::Object^ sender, System::EventArgs^ e) {
-		//MyForm^ mainForm = gcnew MyForm();
-		//mainForm->Show();
 		this->Hide();
 		delete this;
+	}
+	private: System::Void easybtn_Click(System::Object^ sender, System::EventArgs^ e) {
+		main = gcnew UCgplay();
+		main->Dock = System::Windows::Forms::DockStyle::Fill;
+		this->Controls->Add(main);
+		main->BringToFront();
 	}
 };
 }

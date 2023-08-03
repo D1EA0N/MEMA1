@@ -18,21 +18,21 @@
     <ClCompile Include="MyForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UCPlay.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MyUserControl1.cpp">
       <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UCgplay.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UCPlay.h">
+    <ClInclude Include="MyUserControl1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MyUserControl1.h">
+    <ClInclude Include="UCgplay.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
