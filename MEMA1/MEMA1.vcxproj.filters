@@ -41,5 +41,48 @@
     <ClInclude Include="UCquestion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MEMA1.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resource\progess\progress 1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="progress 2.png.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resource\progess\progress 2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resource\progess\progress 3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resource\progess\progress 4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resource\progess\progress 5.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resource\progess\progress 6.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resource\progess\progress 7.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resource\progess\progress 8.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resource\progess\progress 9.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resource\progess\progress 10.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

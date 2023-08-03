@@ -17,14 +17,20 @@ namespace MEMA1 {
 	private:
 		int correctans;
 		int qnum = 1;
-		int shield;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
+		   int shield;
 
 		void askQuestion(int qnum)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(UCquestion::typeid));
+
 			switch (qnum) {
 				case 1:
 					lbltitle->Text = "THE FIRST SETBACK";
 					lblquestion->Text = "What is a strong password?";
+
+					pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+					//pictureBox1->Image = gcnew Bitmap(this->GetType(), "");
 					//btnA
 					//btnB
 					//btnC
@@ -34,6 +40,7 @@ namespace MEMA1 {
 				case 2:
 					lbltitle->Text = "UNMASKING DECEPTIVE THREATS";
 					lblquestion->Text = "What does \"phishing\" refer to ? ";
+					pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"progress 2")));
 					//btnA
 					//btnB
 					//btnC
@@ -43,6 +50,7 @@ namespace MEMA1 {
 				case 3:
 					lbltitle->Text = "IMPORTANCE OF LOGGING OUT";
 					lblquestion->Text = "Why is it essential to log out of your accounts when using public computers?";
+					pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"progress 3")));
 					//btnA
 					//btnB
 					//btnC
@@ -52,6 +60,7 @@ namespace MEMA1 {
 				case 4:
 					lbltitle->Text = "SHADOWS OF DISCLOSURE";
 					lblquestion->Text = "Which of the following is an example of personal information that should not be shared online?";
+					pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"progress 4")));
 					//btnA
 					//btnB
 					//btnC
@@ -61,6 +70,7 @@ namespace MEMA1 {
 				case 5:
 					lbltitle->Text = "SENTINELS OF DEFENSE";
 					lblquestion->Text = "What is the purpose of antivirus software?";
+					pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"progress 5")));
 					//btnA
 					//btnB
 					//btnC
@@ -70,6 +80,7 @@ namespace MEMA1 {
 				case 6:
 					lbltitle->Text = "THE EMAIL ENIGMA";
 					lblquestion->Text = "Which of the following is a secure way to handle suspicious emails?";
+					pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"progress 6")));
 					//btnA
 					//btnB
 					//btnC
@@ -79,6 +90,7 @@ namespace MEMA1 {
 				case 7:
 					lbltitle->Text = "FORTRESS OF ENCRYPTION";
 					lblquestion->Text = "What does \"HTTPS\" stand for in a website URL?";
+					pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"progress 7")));
 					//btnA
 					//btnB
 					//btnC
@@ -88,6 +100,7 @@ namespace MEMA1 {
 				case 8:
 					lbltitle->Text = "DEFENDERS OF DIGITAL BASTION";
 					lblquestion->Text = "Why is it important to keep software and operating systems up to date?";
+					pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"progress 8")));
 					//btnA
 					//btnB
 					//btnC
@@ -97,6 +110,7 @@ namespace MEMA1 {
 				case 9:
 					lbltitle->Text = "CODE NAME: 2FA";
 					lblquestion->Text = "What is the purpose of two-factor authentication (2FA)?";
+					pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"progress 9")));
 					//btnA
 					//btnB
 					//btnC
@@ -106,6 +120,7 @@ namespace MEMA1 {
 				case 10:
 					lbltitle->Text = "THE FINAL STRETCH";
 					lblquestion->Text = "What is the primary goal of cyber awareness?";
+					pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"progress 10")));
 					//btnA
 					//btnB
 					//btnC
@@ -164,18 +179,21 @@ namespace MEMA1 {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(UCquestion::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->btnC = (gcnew System::Windows::Forms::Button());
 			this->btnB = (gcnew System::Windows::Forms::Button());
 			this->btnA = (gcnew System::Windows::Forms::Button());
 			this->lblquestion = (gcnew System::Windows::Forms::Label());
 			this->lbltitle = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panel1
 			// 
 			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel1.BackgroundImage")));
 			this->panel1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->panel1->Controls->Add(this->pictureBox1);
 			this->panel1->Controls->Add(this->btnC);
 			this->panel1->Controls->Add(this->btnB);
 			this->panel1->Controls->Add(this->btnA);
@@ -187,16 +205,29 @@ namespace MEMA1 {
 			this->panel1->Size = System::Drawing::Size(863, 455);
 			this->panel1->TabIndex = 1;
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(304, 54);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(248, 40);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->TabIndex = 2;
+			this->pictureBox1->TabStop = false;
+			// 
 			// btnC
 			// 
 			this->btnC->BackColor = System::Drawing::Color::Transparent;
+			this->btnC->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnC.BackgroundImage")));
+			this->btnC->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->btnC->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnC->FlatAppearance->BorderSize = 0;
 			this->btnC->FlatAppearance->CheckedBackColor = System::Drawing::Color::Transparent;
 			this->btnC->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
 			this->btnC->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			this->btnC->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnC->Location = System::Drawing::Point(545, 248);
+			this->btnC->Location = System::Drawing::Point(573, 270);
 			this->btnC->Name = L"btnC";
 			this->btnC->Size = System::Drawing::Size(210, 80);
 			this->btnC->TabIndex = 1;
@@ -208,13 +239,15 @@ namespace MEMA1 {
 			// btnB
 			// 
 			this->btnB->BackColor = System::Drawing::Color::Transparent;
+			this->btnB->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnB.BackgroundImage")));
+			this->btnB->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->btnB->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnB->FlatAppearance->BorderSize = 0;
 			this->btnB->FlatAppearance->CheckedBackColor = System::Drawing::Color::Transparent;
 			this->btnB->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
 			this->btnB->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			this->btnB->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnB->Location = System::Drawing::Point(316, 248);
+			this->btnB->Location = System::Drawing::Point(326, 270);
 			this->btnB->Name = L"btnB";
 			this->btnB->Size = System::Drawing::Size(210, 80);
 			this->btnB->TabIndex = 1;
@@ -226,18 +259,19 @@ namespace MEMA1 {
 			// btnA
 			// 
 			this->btnA->BackColor = System::Drawing::Color::Transparent;
+			this->btnA->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnA.BackgroundImage")));
+			this->btnA->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->btnA->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnA->FlatAppearance->BorderSize = 0;
 			this->btnA->FlatAppearance->CheckedBackColor = System::Drawing::Color::Transparent;
 			this->btnA->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
 			this->btnA->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			this->btnA->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnA->Location = System::Drawing::Point(83, 248);
+			this->btnA->Location = System::Drawing::Point(73, 270);
 			this->btnA->Name = L"btnA";
 			this->btnA->Size = System::Drawing::Size(210, 80);
 			this->btnA->TabIndex = 1;
 			this->btnA->Tag = L"1";
-			this->btnA->Text = L"button1";
 			this->btnA->UseVisualStyleBackColor = false;
 			this->btnA->Click += gcnew System::EventHandler(this, &UCquestion::CheckerClickEvent);
 			// 
@@ -245,10 +279,10 @@ namespace MEMA1 {
 			// 
 			this->lblquestion->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->lblquestion->BackColor = System::Drawing::Color::Transparent;
-			this->lblquestion->Font = (gcnew System::Drawing::Font(L"Colonna MT", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->lblquestion->Font = (gcnew System::Drawing::Font(L"Colonna MT", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lblquestion->ForeColor = System::Drawing::Color::White;
-			this->lblquestion->Location = System::Drawing::Point(6, 113);
+			this->lblquestion->Location = System::Drawing::Point(3, 151);
 			this->lblquestion->Name = L"lblquestion";
 			this->lblquestion->Size = System::Drawing::Size(857, 102);
 			this->lblquestion->TabIndex = 0;
@@ -259,12 +293,12 @@ namespace MEMA1 {
 			// 
 			this->lbltitle->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->lbltitle->BackColor = System::Drawing::Color::Transparent;
-			this->lbltitle->Font = (gcnew System::Drawing::Font(L"Colonna MT", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->lbltitle->Font = (gcnew System::Drawing::Font(L"Colonna MT", 39.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lbltitle->ForeColor = System::Drawing::Color::White;
-			this->lbltitle->Location = System::Drawing::Point(3, 64);
+			this->lbltitle->Location = System::Drawing::Point(0, 109);
 			this->lbltitle->Name = L"lbltitle";
-			this->lbltitle->Size = System::Drawing::Size(857, 34);
+			this->lbltitle->Size = System::Drawing::Size(857, 42);
 			this->lbltitle->TabIndex = 0;
 			this->lbltitle->Text = L"Title";
 			this->lbltitle->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -278,6 +312,7 @@ namespace MEMA1 {
 			this->Size = System::Drawing::Size(863, 455);
 			this->Load += gcnew System::EventHandler(this, &UCquestion::UCquestion_Load);
 			this->panel1->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -288,7 +323,7 @@ namespace MEMA1 {
 		Button^ senderButton = safe_cast<Button^>(sender);
 		int buttonTag = System::Convert::ToInt32(senderButton->Tag);
 
-		if (buttonTag == correctans)
+		if (buttonTag == correctans && correctans < 10)
 		{
 			shield++;
 			qnum++;

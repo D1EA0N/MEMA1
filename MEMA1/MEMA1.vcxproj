@@ -130,6 +130,7 @@
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="UCgplay.h">
       <FileType>CppControl</FileType>
     </ClInclude>
@@ -153,6 +154,22 @@
     <EmbeddedResource Include="UCquestion.resx">
       <DependentUpon>UCquestion.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MEMA1.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="progress 2.png.bmp" />
+    <Image Include="resource\progess\progress 1.png" />
+    <Image Include="resource\progess\progress 10.png" />
+    <Image Include="resource\progess\progress 2.png" />
+    <Image Include="resource\progess\progress 3.png" />
+    <Image Include="resource\progess\progress 4.png" />
+    <Image Include="resource\progess\progress 5.png" />
+    <Image Include="resource\progess\progress 6.png" />
+    <Image Include="resource\progess\progress 7.png" />
+    <Image Include="resource\progess\progress 8.png" />
+    <Image Include="resource\progess\progress 9.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
