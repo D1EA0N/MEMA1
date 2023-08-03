@@ -152,10 +152,10 @@ namespace MEMA1 {
 		}
 #pragma endregion
 	private: System::Void backbtn_Click(System::Object^ sender, System::EventArgs^ e) {
-		MyForm^ mainForm = gcnew MyForm();
-		mainForm->Show();
-		this->Parent->Controls->Remove(this); 
-		delete this; 
+		//MyForm^ mainForm = gcnew MyForm();
+		//mainForm->Show();
+		this->Hide();
+		delete this;
 	}
 };
 }

@@ -38,13 +38,18 @@ namespace MEMA1 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^ exitbtn;
-	private: System::Windows::Forms::Button^ playbtn;
-	private: System::Windows::Forms::Button^ settingbtn;
+	public: System::Windows::Forms::Button^ exitbtn;
+	protected:
+	public: System::Windows::Forms::Button^ playbtn;
+	public: System::Windows::Forms::Button^ settingbtn;
+	public: System::Windows::Forms::Button^ infobtn;
 
 
 
-	private: System::Windows::Forms::Button^ infobtn;
+
+
+
+
 	private: System::Windows::Forms::Panel^ mainbg;
 
 
@@ -189,7 +194,7 @@ namespace MEMA1 {
 	private: System::Void playbtn_Click(System::Object^ sender, System::EventArgs^ e) {
 		main = gcnew MyUserControl1();
 		main->Dock = System::Windows::Forms::DockStyle::Fill;
-		mainbg->Controls->Clear();
+		//mainbg->Controls->Clear();
 		this->Controls->Add(main);
 		main->BringToFront();
 	}
