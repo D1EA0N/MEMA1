@@ -124,6 +124,7 @@
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="UCgplay.cpp" />
     <ClCompile Include="MyUserControl1.cpp" />
+    <ClCompile Include="UCquestion.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -133,6 +134,9 @@
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="MyUserControl1.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="UCquestion.h">
       <FileType>CppControl</FileType>
     </ClInclude>
   </ItemGroup>
@@ -145,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyUserControl1.resx">
       <DependentUpon>MyUserControl1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCquestion.resx">
+      <DependentUpon>UCquestion.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
