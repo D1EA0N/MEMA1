@@ -131,6 +131,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
     <ClInclude Include="UCgplay.h">
       <FileType>CppControl</FileType>
     </ClInclude>
@@ -156,10 +157,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="MEMA1.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="progress 2.png.bmp" />
     <Image Include="resource\progess\progress 1.png" />
     <Image Include="resource\progess\progress 10.png" />
     <Image Include="resource\progess\progress 2.png" />
@@ -170,6 +167,9 @@
     <Image Include="resource\progess\progress 7.png" />
     <Image Include="resource\progess\progress 8.png" />
     <Image Include="resource\progess\progress 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MEMA1.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

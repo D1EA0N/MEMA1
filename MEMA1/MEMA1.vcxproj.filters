@@ -44,17 +44,12 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="MEMA1.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
+    <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="resource\progess\progress 1.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="progress 2.png.bmp">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="resource\progess\progress 2.png">
@@ -84,5 +79,10 @@
     <Image Include="resource\progess\progress 10.png">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MEMA1.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

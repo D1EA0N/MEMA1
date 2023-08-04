@@ -11403,32 +11403,4 @@
         p+6/aXb62++ZnXnwA7J0Oj45j2+0bNrqoXtJV0kIIYQQsn7+7Z/+P15VEiD7YLHvAAAAAElFTkSuQmCC
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="progress 10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resource\progess\progress 10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="progress 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resource\progess\progress 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="progress 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resource\progess\progress 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="progress 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resource\progess\progress 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="progress 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resource\progess\progress 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="progress 6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resource\progess\progress 6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="progress 7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resource\progess\progress 7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="progress 8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resource\progess\progress 8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="progress 9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resource\progess\progress 9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

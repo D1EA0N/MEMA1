@@ -31,9 +31,9 @@ namespace MEMA1 {
 
 					pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 					//pictureBox1->Image = gcnew Bitmap(this->GetType(), "");
-					//btnA
-					//btnB
-					//btnC
+					btnA->Text = "a) A password that uses only lowercase letters";
+					btnB->Text = "b) A password that uses common words or phrases ";
+					btnC->Text = "c) A password that includes a mix of uppercase letters, lowercase letters, numbers, and special characters";
 
 					correctans = 3;
 					break;
@@ -227,12 +227,14 @@ namespace MEMA1 {
 			this->btnC->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
 			this->btnC->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			this->btnC->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnC->Location = System::Drawing::Point(573, 270);
+			this->btnC->Font = (gcnew System::Drawing::Font(L"Code Light", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(77)));
+			this->btnC->Location = System::Drawing::Point(576, 299);
 			this->btnC->Name = L"btnC";
 			this->btnC->Size = System::Drawing::Size(210, 80);
 			this->btnC->TabIndex = 1;
 			this->btnC->Tag = L"3";
-			this->btnC->Text = L"button1";
+			this->btnC->Text = L"BUTTON 1";
 			this->btnC->UseVisualStyleBackColor = false;
 			this->btnC->Click += gcnew System::EventHandler(this, &UCquestion::CheckerClickEvent);
 			// 
@@ -247,12 +249,14 @@ namespace MEMA1 {
 			this->btnB->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
 			this->btnB->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			this->btnB->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnB->Location = System::Drawing::Point(326, 270);
+			this->btnB->Font = (gcnew System::Drawing::Font(L"Code Light", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(77)));
+			this->btnB->Location = System::Drawing::Point(327, 299);
 			this->btnB->Name = L"btnB";
 			this->btnB->Size = System::Drawing::Size(210, 80);
 			this->btnB->TabIndex = 1;
 			this->btnB->Tag = L"2";
-			this->btnB->Text = L"button1";
+			this->btnB->Text = L"BUTTON 1";
 			this->btnB->UseVisualStyleBackColor = false;
 			this->btnB->Click += gcnew System::EventHandler(this, &UCquestion::CheckerClickEvent);
 			// 
@@ -267,11 +271,14 @@ namespace MEMA1 {
 			this->btnA->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
 			this->btnA->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			this->btnA->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnA->Location = System::Drawing::Point(73, 270);
+			this->btnA->Font = (gcnew System::Drawing::Font(L"Code Light", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(77)));
+			this->btnA->Location = System::Drawing::Point(72, 299);
 			this->btnA->Name = L"btnA";
 			this->btnA->Size = System::Drawing::Size(210, 80);
 			this->btnA->TabIndex = 1;
 			this->btnA->Tag = L"1";
+			this->btnA->Text = L"BUTTON 1";
 			this->btnA->UseVisualStyleBackColor = false;
 			this->btnA->Click += gcnew System::EventHandler(this, &UCquestion::CheckerClickEvent);
 			// 
@@ -279,12 +286,12 @@ namespace MEMA1 {
 			// 
 			this->lblquestion->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->lblquestion->BackColor = System::Drawing::Color::Transparent;
-			this->lblquestion->Font = (gcnew System::Drawing::Font(L"Colonna MT", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->lblquestion->Font = (gcnew System::Drawing::Font(L"Code Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(77)));
 			this->lblquestion->ForeColor = System::Drawing::Color::White;
-			this->lblquestion->Location = System::Drawing::Point(3, 151);
+			this->lblquestion->Location = System::Drawing::Point(3, 158);
 			this->lblquestion->Name = L"lblquestion";
-			this->lblquestion->Size = System::Drawing::Size(857, 102);
+			this->lblquestion->Size = System::Drawing::Size(857, 129);
 			this->lblquestion->TabIndex = 0;
 			this->lblquestion->Text = L"Question";
 			this->lblquestion->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -293,10 +300,10 @@ namespace MEMA1 {
 			// 
 			this->lbltitle->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->lbltitle->BackColor = System::Drawing::Color::Transparent;
-			this->lbltitle->Font = (gcnew System::Drawing::Font(L"Colonna MT", 39.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->lbltitle->Font = (gcnew System::Drawing::Font(L"Code Light", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(77)));
 			this->lbltitle->ForeColor = System::Drawing::Color::White;
-			this->lbltitle->Location = System::Drawing::Point(0, 109);
+			this->lbltitle->Location = System::Drawing::Point(0, 116);
 			this->lbltitle->Name = L"lbltitle";
 			this->lbltitle->Size = System::Drawing::Size(857, 42);
 			this->lbltitle->TabIndex = 0;
