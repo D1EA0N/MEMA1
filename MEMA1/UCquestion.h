@@ -17,8 +17,12 @@ namespace MEMA1 {
 	private:
 		int correctans;
 		int qnum = 1;
+		int shield = 0;
+
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
-		   int shield;
+	private: System::Windows::Forms::PictureBox^ pictureBox2;
+	private: System::Windows::Forms::Label^ lblcount;
+
 
 		void askQuestion(int qnum)
 		{
@@ -128,6 +132,7 @@ namespace MEMA1 {
 					correctans = 3;
 					break;
 			}
+			lblcount->Text = "X " + shield;
 		}
 	public:
 		UCquestion(void)
@@ -185,19 +190,24 @@ namespace MEMA1 {
 			this->btnA = (gcnew System::Windows::Forms::Button());
 			this->lblquestion = (gcnew System::Windows::Forms::Label());
 			this->lbltitle = (gcnew System::Windows::Forms::Label());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->lblcount = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panel1
 			// 
 			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel1.BackgroundImage")));
 			this->panel1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->panel1->Controls->Add(this->lblcount);
+			this->panel1->Controls->Add(this->lblquestion);
+			this->panel1->Controls->Add(this->pictureBox2);
 			this->panel1->Controls->Add(this->pictureBox1);
 			this->panel1->Controls->Add(this->btnC);
 			this->panel1->Controls->Add(this->btnB);
 			this->panel1->Controls->Add(this->btnA);
-			this->panel1->Controls->Add(this->lblquestion);
 			this->panel1->Controls->Add(this->lbltitle);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel1->Location = System::Drawing::Point(0, 0);
@@ -310,6 +320,33 @@ namespace MEMA1 {
 			this->lbltitle->Text = L"Title";
 			this->lbltitle->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
+			// pictureBox2
+			// 
+			this->pictureBox2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->pictureBox2->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.BackgroundImage")));
+			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox2->Location = System::Drawing::Point(706, 43);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(80, 80);
+			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox2->TabIndex = 2;
+			this->pictureBox2->TabStop = false;
+			// 
+			// lblcount
+			// 
+			this->lblcount->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->lblcount->BackColor = System::Drawing::Color::Transparent;
+			this->lblcount->Font = (gcnew System::Drawing::Font(L"Code Light", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(77)));
+			this->lblcount->ForeColor = System::Drawing::Color::White;
+			this->lblcount->Location = System::Drawing::Point(792, 56);
+			this->lblcount->Name = L"lblcount";
+			this->lblcount->Size = System::Drawing::Size(60, 60);
+			this->lblcount->TabIndex = 0;
+			this->lblcount->Text = L"count";
+			this->lblcount->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
 			// UCquestion
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -320,6 +357,7 @@ namespace MEMA1 {
 			this->Load += gcnew System::EventHandler(this, &UCquestion::UCquestion_Load);
 			this->panel1->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			this->ResumeLayout(false);
 
 		}
